@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入公共的样式 -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>留言</title>
+  </head>
+  <style>
+    /* 主体的样式 */
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(https://userblink.csdnimg.cn/20230604/m0_62706377/pic/791907fd9df3c04675150f03b59bbf3f-5.png?x-oss-process=image/watermark,image_bG9nby9sb2dvM3gucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLGhfMTU=,text_QG0wXzYyNzA2Mzc3,color_FFFFFF,size_16,type_ZmFuZ3poZW5naGVpdGk,shadow_20,t_50,g_se,x_16,y_16,order_0,align_2,interval_4);
+      /* 背景位置 */
+      background-position: center center;
+      /* 背景不平铺 */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /* flex布局 */
+    nav {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+      width: 80%;
+      text-align: center;
+      font-size: 24px;
+    }
+    nav a {
+      display: block;
+      width: 160px;
+    }
+    /* 浮动布局 */
+    main .box {
+      float: left;
+      width: 40%;
+      height: 600px;
+      margin: 15px 60px 0;
+      border-radius: 12px;
+      background-color: rgba(250, 235, 215, 0.6);
+    }
+    form div {
+      display: flex;
+      margin-top: 40px;
+    }
+    .label {
+      text-align: right;
+      width: 20%;
+      height: 30px;
+      line-height: 30px;
+    }
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    textarea {
+      width: 60%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+   /* 设置radio单选项 */
+    input[type='radio'],
+   /* 设置checkbox多选项 */
+    input[type='checkbox'] {
+      margin-right: 5px;
+    }
+
+    input[type='submit'] {
+      display: block;
+      width: 100px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 40px auto;
+    }
+
+    input[type='submit']:hover {
+      background-color: #3e8e41;
+    }
+    .box h3{
+      text-align: center;
+    }
+    .box img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+      border-radius: 12px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <!-- href引入不同的页面 -->
+          <a href="./index.html">主页</a>
+          <a href="./hobby.html">兴趣</a>
+          <a href="./message.html">留言</a>
+          <a href="./resume.html">简历</a>
+        </nav>
+      </header>
+      <main>
+        <div class="box">
+          <form>
+            <div>
+              <label class="label" for="name">姓名：</label>
+              <!-- disabled使成为制作者个人简介，无法修改 -->
+              <input type="text" id="name" name="name"  />
+            </div>
+            <div>
+              <!-- 性别判断设置 -->
+              <label class="label">性别：</label>
+              <label for="male" >男</label>
+              <input type="radio" id="male" name="gender" value="male" checked />
+              <label for="female">女</label>
+              <input type="radio" id="female" name="gender" value="female" />
+            </div>
+            <div>
+              <!-- 电话设置 -->
+              <label for="phone" class="label">电话：</label>
+              <input type="tel" id="phone" name="phone"  />
+            </div>
+            <div>
+              <!-- qq设置 -->
+              <label for="qq" class="label">QQ：</label>
+              <input type="text" id="qq" name="qq"  />
+            </div>
+            <div>
+              <!-- 兴趣爱好的设置 -->
+              <label class="label">兴趣爱好：</label>
+              <label for="hobby1">阅读</label>
+              <input type="checkbox" id="hobby1" name="hobby1" value="hobby1" />
+              <label for="hobby2">运动</label>
+              <input type="checkbox" id="hobby2" name="hobby2" value="hobby2" />
+              <label for="hobby3">游戏</label>
+              <input type="checkbox" id="hobby3" name="hobby3" value="hobby3" />
+              <label for="hobby4">健身</label>
+              <input type="checkbox" id="hobby4" name="hobby4" value="hobby4" />
+              <label for="hobby5">唱歌</label>
+              <input type="checkbox" id="hobby5" name="hobby5" value="hobby5" />
+            </div>
+            <div>
+              <!-- 地址设置 -->
+              <label for="address" class="label">地址：</label>
+              <textarea id="address" name="address" >
+              </textarea>
+            </div>
+
+            <input type="submit" value="提交" />
+          </form>
+        </div>
+        <div class="box">
+          <h3>个人荣誉</h3>
+          <!-- src引入图片路径 -->
+          <img src="https://userblink.csdnimg.cn/20230604/m0_62706377/pic/42d5386b05b948bcf65143c5c5f428fa-2.png?x-oss-process=image/watermark,image_bG9nby9sb2dvM3gucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLGhfMjM=,text_QG0wXzYyNzA2Mzc3,color_FFFFFF,size_24,type_ZmFuZ3poZW5naGVpdGk,shadow_20,t_50,g_se,x_16,y_16,order_0,align_2,interval_4" alt="">
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

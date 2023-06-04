@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style:none;
+}
+a{
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+a:hover {
+  color: rgba(215, 24, 132, 0.6);
+}

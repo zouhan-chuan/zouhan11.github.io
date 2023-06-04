@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>个人简历</title>
+  </head>
+  <style>
+    /* 主体的样式 */
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background-image: url(https://userblink.csdnimg.cn/20230604/m0_62706377/pic/791907fd9df3c04675150f03b59bbf3f-5.png?x-oss-process=image/watermark,image_bG9nby9sb2dvM3gucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLGhfMTU=,text_QG0wXzYyNzA2Mzc3,color_FFFFFF,size_16,type_ZmFuZ3poZW5naGVpdGk,shadow_20,t_50,g_se,x_16,y_16,order_0,align_2,interval_4);
+      /* 背景位置 */
+      background-position: center center;
+      /* 背景不平铺 */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    /* flex布局 */
+    nav {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+      width: 80%;
+      text-align: center;
+      font-size: 24px;
+    }
+    nav a {
+      display: block;
+      width: 160px;
+    }
+    /* relative相对定位 */
+    body {
+      position: relative;
+    }
+    /* absolute绝对定位 */
+    main div {
+      position: absolute;
+      left: 120px;
+      width: 80%;
+      height: 600px;
+      margin: 15px 60px 0;
+      border-radius: 12px;
+      background-color: rgba(250, 235, 215, 0.6);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: rgba(242, 242, 242, 0.3);
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(242, 242, 242, 0.3);
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <!-- 构造表头 -->
+      <header>
+        <nav>
+          <!-- href引入不同的页面 -->
+          <a href="./index.html">主页</a>
+          <a href="./hobby.html">兴趣</a>
+          <a href="./message.html">留言</a>
+          <a href="./resume.html">简历</a>
+        </nav>
+      </header>
+      <main>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>个人简介</th>
+                <th>性格</th>
+                <th>个人优势</th>
+                <th>获奖记录</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>邹瀚，男，出生于2003年，高中毕业于华中师范大学第一附属中学，现在就读于中南财经政法大学，学号202121130165，2021级入学，现在正攻读“大数据管理与应用+金融工程”双学位专业</td>
+                <td>乐观</td>
+                <td>我具备出色的学习能力并且乐于学习、敢于创新，不断追求卓越;作为项目参与者，我具备诚实可信的品格、富有团队合作精神;作为领导者，我具备做事干练、
+                  果断的风格，良好的沟通和人际协调能力。</td>
+                <td>2021年以作为主持人获得第33届博文杯校级立项</td>
+              </tr>     
+              <tr>
+                <td></td>
+                <td>敢于创新</td>
+                <td>我拥有较强的创新能力，能根据基本知识进行较深层次地推敲和学习，在竞赛方面屡获佳绩。</td>
+                <td>2022年获得大学生数学竞赛湖北省赛区一等奖</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>勇于接受挑战</td>
+                <td>我有很强的忍耐力、意志力和吃苦耐劳的品质，对工作认真负责，积极进取，个性乐观执着，
+                  敢于面对困难与挑战。</td>
+                <td>2023年获得美国数学建模大赛比赛M奖</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
